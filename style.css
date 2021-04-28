@@ -1,5 +1,5 @@
 :root {
-  --rut-siz: 10mm;
+  --rut-siz: 12mm;
 }
 
 * {
@@ -16,6 +16,7 @@ body {
   margin: 5mm;
   display: grid;
   grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: 1fr 1fr;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -41,7 +42,7 @@ body {
 }
 
 .bricka + .bricka {
-  border-top: 1.3pt solid black;
+  margin-top: 1ch;
 }
 
 .rutor {

@@ -3,11 +3,19 @@ const BRICKA1 = document.getElementById('bricka1');
 const BRICKA2 = document.getElementById('bricka2');
 const BRICKA3 = document.getElementById('bricka3');
 const BRICKA4 = document.getElementById('bricka4');
+const BRICKA5 = document.getElementById('bricka5');
+const BRICKA6 = document.getElementById('bricka6');
+const BRICKA7 = document.getElementById('bricka7');
+const BRICKA8 = document.getElementById('bricka8');
 
 const RUTOR1 = BRICKA1.children;
 const RUTOR2 = BRICKA2.children;
 const RUTOR3 = BRICKA3.children;
 const RUTOR4 = BRICKA4.children;
+const RUTOR5 = BRICKA5.children;
+const RUTOR6 = BRICKA6.children;
+const RUTOR7 = BRICKA7.children;
+const RUTOR8 = BRICKA8.children;
 
 // alien code
 function shuffle (array) {
@@ -83,11 +91,32 @@ genBoard().forEach(element => {
   random.className = 'rutor';
   random.innerHTML = element;
 });
-
-// console.log(genBoard());
+genBoard().forEach(element => {
+  const random = document.createElement('div');
+  BRICKA5.append(random);
+  random.className = 'rutor';
+  random.innerHTML = element;
+});
+genBoard().forEach(element => {
+  const random = document.createElement('div');
+  BRICKA6.append(random);
+  random.className = 'rutor';
+  random.innerHTML = element;
+});
+genBoard().forEach(element => {
+  const random = document.createElement('div');
+  BRICKA7.append(random);
+  random.className = 'rutor';
+  random.innerHTML = element;
+});
+genBoard().forEach(element => {
+  const random = document.createElement('div');
+  BRICKA8.append(random);
+  random.className = 'rutor';
+  random.innerHTML = element;
+});
 
 // cull div
-
 function CullingNumber () {
   const culling = shuffle([0, 1, 2, 3, 4, 5, 6, 7, 8]);
   const tempCulling = culling.slice(0, 4);
@@ -111,3 +140,7 @@ Culling(RUTOR1);
 Culling(RUTOR2);
 Culling(RUTOR3);
 Culling(RUTOR4);
+Culling(RUTOR5);
+Culling(RUTOR6);
+Culling(RUTOR7);
+Culling(RUTOR8);
