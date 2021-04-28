@@ -29,6 +29,7 @@ body {
   justify-items: center;
   font-family: Calibri, sans-serif;
   font-weight: 500;
+  gap: 1ch;
 }
 
 .bricka {
@@ -48,9 +49,6 @@ body {
   border: 0.3ch solid #999999;
   border-top: 1.1ch solid #999999;
   border-radius: 0.3ch;
-}
-
-.bricka + .bricka {
   margin: 1ch 2ch;
 }
 
