@@ -1,5 +1,5 @@
 :root {
-  --rut-siz: 18mm;
+  --rut-siz: 10mm;
 }
 
 * {
@@ -7,9 +7,11 @@
           box-sizing: border-box;
 }
 
+@page {
+  margin: 1cm;
+  size: A4;
+}
 body {
-  width: 200mm;
-  height: 287mm;
   margin: 0;
   margin: 5mm;
   display: grid;
@@ -54,7 +56,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  font-size: 32pt;
+  font-size: 18pt;
   height: var(--rut-siz);
   width: var(--rut-siz);
 }/*# sourceMappingURL=style.css.map */
