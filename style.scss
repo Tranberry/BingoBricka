@@ -1,5 +1,7 @@
 :root {
   --rut-siz: 12mm;
+  --clr-neutral-500: hsl(0, 0%, 60%);
+  --clr-accent: hsl(350, 71%, 41%);
 }
 
 * {
@@ -12,6 +14,9 @@
 @media print {
   body {
     transform: rotate(90deg) translate(20%, 0%);
+  }
+  .interface * {
+    display: none;
   }
 }
 body {
@@ -28,6 +33,33 @@ body {
   gap: 1ch;
 }
 
+.interface {
+  position: absolute;
+  top: 5mm;
+  display: grid;
+  gap: 1ch;
+  margin-top: 1ch;
+
+  .btn {
+    background-color: var(--clr-accent);
+    border: 2px solid var(--clr-accent);
+    padding: 1ch 1.5ch;
+    border-radius: 1ch;
+    text-align: center;
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+  }
+  a:hover {
+    color: black;
+    background-color: white;
+    border-color: var(--clr-accent);
+    box-shadow: 0 4px 10px var(--clr-neutral-500);
+  }
+}
+
 .bricka {
   display: grid;
   gap: 0.45ch;
@@ -38,13 +70,13 @@ body {
   align-content: center;
   align-items: center;
   justify-content: center;
-  border: 0.3ch solid hsl(0, 0%, 60%);
-  border-top: 1.1ch solid hsl(0, 0%, 60%);
+  border: 0.3ch solid var(--clr-neutral-500);
+  border-top: 1.1ch solid var(--clr-neutral-500);
   border-radius: 0.3ch;
   margin: 1ch 2ch;
 }
 .rutor {
-  border: 1.8pt solid hsl(0, 0%, 60%);
+  border: 1.8pt solid var(--clr-neutral-500);
   border-radius: 4pt;
   display: flex;
   align-items: center;

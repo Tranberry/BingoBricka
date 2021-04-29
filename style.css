@@ -1,5 +1,7 @@
 :root {
   --rut-siz: 12mm;
+  --clr-neutral-500: hsl(0, 0%, 60%);
+  --clr-accent: hsl(350, 71%, 41%);
 }
 
 * {
@@ -15,6 +17,10 @@
   body {
     -webkit-transform: rotate(90deg) translate(20%, 0%);
             transform: rotate(90deg) translate(20%, 0%);
+  }
+
+  .interface * {
+    display: none;
   }
 }
 body {
@@ -32,6 +38,32 @@ body {
   gap: 1ch;
 }
 
+.interface {
+  position: absolute;
+  top: 5mm;
+  display: grid;
+  gap: 1ch;
+  margin-top: 1ch;
+}
+.interface .btn {
+  background-color: var(--clr-accent);
+  border: 2px solid var(--clr-accent);
+  padding: 1ch 1.5ch;
+  border-radius: 1ch;
+  text-align: center;
+}
+.interface a {
+  color: white;
+  text-decoration: none;
+}
+.interface a:hover {
+  color: black;
+  background-color: white;
+  border-color: var(--clr-accent);
+  -webkit-box-shadow: 0 4px 10px var(--clr-neutral-500);
+          box-shadow: 0 4px 10px var(--clr-neutral-500);
+}
+
 .bricka {
   display: grid;
   gap: 0.45ch;
@@ -46,14 +78,14 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  border: 0.3ch solid #999999;
-  border-top: 1.1ch solid #999999;
+  border: 0.3ch solid var(--clr-neutral-500);
+  border-top: 1.1ch solid var(--clr-neutral-500);
   border-radius: 0.3ch;
   margin: 1ch 2ch;
 }
 
 .rutor {
-  border: 1.8pt solid #999999;
+  border: 1.8pt solid var(--clr-neutral-500);
   border-radius: 4pt;
   display: -webkit-box;
   display: -ms-flexbox;
