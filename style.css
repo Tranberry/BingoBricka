@@ -17,10 +17,16 @@
   body {
     -webkit-transform: rotate(90deg) translate(20%, 0%);
             transform: rotate(90deg) translate(20%, 0%);
+    min-width: initial;
   }
 
   .interface * {
     display: none;
+  }
+}
+@media screen {
+  body {
+    min-width: 900px;
   }
 }
 body {
@@ -57,6 +63,7 @@ body {
   text-decoration: none;
 }
 .interface a:hover {
+  cursor: pointer;
   color: black;
   background-color: white;
   border-color: var(--clr-accent);
