@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bingo v3</title>
+  <link rel="stylesheet" href="bingo3.css">
+</head>
+<body>
+  <h1>90-Ball Bingo Ticket Generator</h1>
+
+  <section id="buttons">
+    <!-- button call function 'generateTicket' -->
+    <button title="Alt + Shift + N | Creates a new Ticket" accesskey="n" aria-keyshortcuts="+" onclick="generateTicket()">Generate Ticket</button>
+    <!-- button call function 'regenerateTickets' -->
+    <button title="Alt + Shift + R | Generates new numbers for all Tickets" accesskey="r" onclick="regenerateTickets()">Regenerate Ticket(s)</button>
+    <!-- button call function 'removeTickets' -->
+    <button id="btn-warning" title="Alt + Shift + C | Clears all Tickets" accesskey="c" onclick="clearTickets()">Clear Ticket(s)</button>
+    <legend>
+      <kbd>Alt</kbd> <kdb>+</kdb> <kbd>Shift</kbd> <kdb>+</kdb> <kbd>N</kbd> Creates a new Ticket <br>
+      <kbd>Alt</kbd> <kdb>+</kdb> <kbd>Shift</kbd> <kdb>+</kdb> <kbd>R</kbd> Generates new numbers for all Tickets
+      <kbd>Alt</kbd> <kdb>+</kdb> <kbd>Shift</kbd> <kdb>+</kdb> <kbd>C</kbd> Clears all Tickets <br>
+    </legend>
+  </section>
+  <div id="tickets"></div>
+  <!-- import bingo-ticket-v3.js -->
+  <script src="bingo-ticket-v3.js"></script>
+</body>
+</html>

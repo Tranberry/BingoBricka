@@ -1,0 +1,125 @@
+body {
+  /* gradiant background */
+  background: linear-gradient(217deg, #3b3838 0%, #141414 100%);
+  color: white;
+  min-height: 98vh;
+
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#tickets {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+}
+.ticket {
+  --default-gap: 3mm;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-rows: repeat(3, 1fr);
+  gap: 1mm;
+  margin: 0 6mm 6mm 0;
+  /* center items */
+  justify-items: center;
+  align-items: center;
+
+  background: linear-gradient(217deg, #5c3030 0%, #141414 100%);
+  padding: 10mm var(--default-gap) var(--default-gap) var(--default-gap);
+  border-radius: var(--default-gap);
+  position: relative;
+}
+.ticket::before {
+  content: "BINGO";
+  position: absolute;
+  top: var(--default-gap);
+  left: var(--default-gap);
+  font-size: 1.4em;
+  font-weight: 700;
+}
+
+#buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: left;
+  align-items: center;
+  margin-bottom: 5mm;
+}
+
+button {
+  --main-color: hotpink;
+  --acc-color: white;
+  cursor: pointer;
+  height: 3em;
+  padding: 0 1em;
+  border-radius: 0.2em;
+  border: none;
+  background-color: var(--acc-color);
+  box-shadow: .1em .1em 0 gray;
+}
+button:focus {
+  outline: .3em solid var(--main-color);
+}
+button:hover {
+  background-color: var(--main-color);
+  color: var(--acc-color);
+}
+button:active {
+  background-color: var(--acc-color);
+  color: var(--main-color);
+}
+#btn-warning {
+  --main-color: red;
+  --acc-color: white;
+}
+kbd {
+  background-color: #eee;
+  border-radius: 3px;
+  border: 1px solid #b4b4b4;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, .2), 0 2px 0 0 rgba(255, 255, 255, .7) inset;
+  color: #333;
+  display: inline-block;
+  font-size: .85em;
+  font-weight: 700;
+  line-height: 1;
+  padding: 2px 4px;
+  white-space: nowrap;
+ }
+
+
+
+.number, .x {
+  /* bingo numbers */
+  --ball-size: 2em;
+  height: var(--ball-size);
+  width: var(--ball-size);
+  background-color: #f0f0f0;
+  border-radius: 50%;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: center;
+  line-height: var(--ball-size);
+  color: black;
+}
+
+.x {
+  background-color: gray;
+  color: transparent;
+}
+
+/* if touchscreen */
+@media (pointer: coarse) {
+  #buttons legend {
+    display: none;
+  }
+}
+
+@media print {
+  #buttons {
+    display: none;
+  }
+  h1 {
+    font-size: 14pt;
+  }
+  .number, .x {
+    border: 1pt solid gray;
+  }
+}
